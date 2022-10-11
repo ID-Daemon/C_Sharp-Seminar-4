@@ -95,9 +95,13 @@ int sizeArray = 8;
 
 // Тело программы
 int questionNumber = StartHW();
-if (questionNumber == 1) DegreeNumber();
-else if (questionNumber == 2) SumNumbers();
-else ViewArray(FillArray(sizeArray), "-");
+switch (questionNumber)
+{
+    case 1: DegreeNumber(); break;
+    case 2: SumNumbers(); break;
+    case 3: ViewArray(FillArray(sizeArray), "-"); break;
+    
+}
 
 // Выбор задания для выполнения
 int StartHW()
