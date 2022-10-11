@@ -96,7 +96,7 @@ int sizeArray = 8;
 // Тело программы
 int questionNumber = StartHW();
 if (questionNumber == 1) DegreeNumber();
-else if (questionNumber == 2) Console.WriteLine($"Сумма чисел в цифре равна {SumNumbers()}");
+else if (questionNumber == 2) SumNumbers();
 else ViewArray(FillArray(sizeArray), "-");
 
 // Выбор задания для выполнения
@@ -136,11 +136,11 @@ int LogicForDegreeNumber(int a, int b)
 
 // Метод(ы) второго задания
 // Можно очень легко решить это используя string, но я подумал что так нельзя :)
-int SumNumbers()
+void SumNumbers()
 {
     Console.Write("Введите число/цифру: ");
     int number = int.Parse(Console.ReadLine()!);
-    return LogicForSumNumbers(number);
+    Console.WriteLine($"Сумма чисел в цифре {number} равна - {LogicForSumNumbers(number)}");
 }
 
 int LogicForSumNumbers(int number)
