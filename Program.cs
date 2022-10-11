@@ -95,7 +95,7 @@ int sizeArray = 8;
 
 // Тело программы
 int questionNumber = StartHW();
-if (questionNumber == 1) Console.WriteLine(DegreeNumber());
+if (questionNumber == 1) DegreeNumber();
 else if (questionNumber == 2) Console.WriteLine($"Сумма чисел в цифре равна {SumNumbers()}");
 else ViewArray(FillArray(sizeArray), "-");
 
@@ -114,14 +114,13 @@ int StartHW()
 
 
 // Метод(ы) первого задания
-int DegreeNumber()
+void DegreeNumber()
 {
     Console.Write("Введите число: ");
     int a = int.Parse(Console.ReadLine()!);
     Console.Write("Введите искомую натуральную степень: ");
     int b = int.Parse(Console.ReadLine()!);
-    Console.Write($"{a} в натуральнойстепени {b} равняется - ");
-    return LogicForDegreeNumber(a, b);
+    Console.Write($"{a} в натуральнойстепени {b} равняется - {LogicForDegreeNumber(a, b)}");
 }
 
 int LogicForDegreeNumber(int a, int b)
